@@ -27,6 +27,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sora:wght@100..800&display=swap');
 
+        @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Special+Gothic:wght@400..700&display=swap');
+
         * {
             padding: 0; margin: 0;
             transition: all 0.75s;
@@ -47,6 +51,8 @@
         section {height: 800px;}
 
         p {font-size: 18px; color: white; padding: 40px 0 10px 0;}
+
+        #home h2{text-transform: uppercase; padding-top: 28px; font-size: 38px;font-family: 'Special Gothic', sans-serif;}
 
         /* Classes 
         ==================*/
@@ -106,6 +112,23 @@
             overflow: hidden;
             align-items: center;
         }
+
+        /* Descrição 
+        ===================*/
+        #desc{background-color: var(--cor1);height: 1000px;padding: 40px 0 0 0;}
+
+        #desc h1{color: var(--cor2);font-size: 36px;}
+
+        #desc h2{color: var(--cor2);font-size: 24px; padding: 30px 0 0 0;}
+
+        #desc p:nth-child(2){padding: 0;}
+        #desc p:nth-child(3){padding: 0;}
+
+        #desc p{color: rgb(64, 63, 63); padding: 0 0 0 40px; margin-bottom: 10px;}
+
+        #desc li{color: rgb(64, 63, 63); padding: 0 0 0 0; margin-bottom: 10px; font-size: 18px;}
+
+        #desc ul{margin-left: 55px;}
 
         /*Rodape 
         ==================*/
@@ -176,12 +199,27 @@
             #motos {height: 535px;}
                 
             #motos img {width: 165px;height: 165px;margin: 0 145px;}
+
+            /*Descrição
+            ==================*/
+            #desc {height: 1385px;}
+
+            #desc p:nth-child(2){padding: 10px 40px;}
+            #desc p:nth-child(3){padding: 0 40px;}
+
+            #desc p{font-size: 14px; padding: 0 40px;}
+
+            #desc li{font-size: 14px; padding: 0 40px 0 0;}
+
+            #desc h1{font-size: 26px; padding: 0 40px;}
+
+            #desc h2{font-size: 22px; padding: 25px 38px 0 38px;}
                 
             /*Rodape
             ==================*/
             #rodape {height: 265px;}
                 
-            #rodape p {padding: 35px 0 10px 0;text-align: center;font-size: 14px;}
+            #rodape p {padding: 35px 0 20px 0;text-align: center;font-size: 14px;}
 
             #rodape a:nth-child(2) {
                 position: relative;
@@ -232,6 +270,13 @@
 
             .seta-direita {right: -35px;}
 
+            /*Descrição
+            ==================*/
+
+            #desc h1{font-size: 26px;}
+
+            #desc p, #desc li{font-size: 16px;}
+
             /*Rodape
             ==================*/
             #rodape {height: 280px;}
@@ -244,14 +289,15 @@
 
             section {overflow: hidden;}
 
-            p {font-size: 28px;}
-
             #motos {height: 700px;}
 
             #motos img {width: 250px; height: 250px; margin: 0 75px;}
 
-            #fotos {height: 700px; padding: 0px 315px;
-            }
+            #fotos {height: 700px; padding: 0px 315px;}
+
+            /*Descrição
+            ==================*/
+            #desc p {font-size: 18px;}
 
             /*Rodape
             ==================*/
@@ -277,9 +323,10 @@
         <div class="container">
             <div class="row align-items-center justify-content-center justify-content-md-start">
 
-                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex flex-column align-items-center align-items-sm-start">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-3 d-flex flex-column align-items-center align-items-sm-start">
                     <img class="img-fluid navbar-sm-brand" src="imgs/logo.png" alt="logo">
                 </div>
+
             </div>
         </div>
     </header>
@@ -298,6 +345,47 @@
 
         </div>
     </section>
+
+    <section id="desc">
+        <div class="container">
+
+            <h1>Elite Rodas – A Sua Scooter Elétrica Está Aqui!</h1>
+
+            <p>Na Elite Rodas, acreditamos que o futuro da mobilidade é elétrico, sustentável e acessível.Oferecemos scooters elétricas modernas, potentes e econômicas, ideais para o dia a dia no Rio de Janeiro.</p>
+
+            <p>Com entrega rápida em todo o RJ e parcelamento facilitado em até 12x, você pode dar o próximo passo rumo à liberdade sobre duas rodas sem pesar no bolso!</p>
+
+            <h2>⚡ Por que escolher a Elite Rodas?</h2>
+
+            <ul>
+                <li>Scooters elétricas com autonomia real e design moderno</li>
+                <li>Zero emissão de poluentes e baixo custo de manutenção</li>
+                <li>Entrega garantida em todo o estado do Rio de Janeiro</li>
+                <li>Parcelamento em até 12x nos principais cartões</li>
+                <li>Suporte especializado e atendimento humanizado</li>
+            </ul>
+
+            <h2>🎯 Nossa Missão:</h2>
+
+            <p>Levar mobilidade inteligente, sustentável e acessível para todos, conectando pessoas a um estilo de vida moderno, econômico e consciente.</p>
+
+            <h2>&#128064; Nossa Visão:</h2>
+
+            <p>Ser referência em scooters elétricas no Rio de Janeiro, inspirando uma nova geração de condutores a adotar a mobilidade elétrica como primeira escolha.</p>
+
+            <h2>💚 Nossos Valores:</h2>
+
+            <ul>
+                <li>Sustentabilidade: Cuidar do planeta com cada quilômetro rodado.</li>
+                <li>Inovação: Oferecer sempre as melhores tecnologias em mobilidade elétrica.</li>
+                <li>Comprometimento: Garantir segurança, qualidade e satisfação em cada entrega.</li>
+                <li>Transparência: Atuar com honestidade e respeito em todas as relações.</li>
+                <li>Acessibilidade: Tornar o transporte elétrico possível para todos.</li>
+            </ul>
+
+        </div>
+    </section>
+
 
     <footer id="rodape" class="d-flex flex-column align-items-center">
         <a style="animation: whatsapp 2.5s infinite ease-in-out;" target="_blank" href="https://api.whatsapp.com/send/?phone=5521968193720"><img class="img-fluid" width="160" src="imgs/Whats.png" alt="icone do whatsapp"></a>

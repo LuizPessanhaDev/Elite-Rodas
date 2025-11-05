@@ -62,9 +62,13 @@
 
         .item{filter: saturate(0);}
 
-        .item-foco {opacity: 1; transform: scale(1.35); filter: saturate(1);}
+        .item-foco {transform: scale(1.35); filter: saturate(1);}
 
-        .seta-esquerda {
+        .item-foco2 {opacity: 1 !important; transform: scale(1.35); filter: saturate(1) !important; z-index: 1; box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.655);}
+
+        .item-quase-foco{transform: scale(1.2)}
+
+        .seta-esquerda, .seta-esquerda2 {
             position: absolute;
             background-color: transparent;
             top: 0;
@@ -78,7 +82,7 @@
             z-index: 1;
         }
 
-        .seta-direita {
+        .seta-direita, .seta-direita2 {
             position: absolute;
             background-color: transparent;
             top: 0;
@@ -102,7 +106,7 @@
 
         #motos img {width: 300px; height: 300px; margin: 0 75px;}
 
-        #container { position: relative; margin: 0 auto;}
+        #container, #container2 { position: relative; margin: 0 auto;}
 
         #fotos {
             height: 1040px;
@@ -115,7 +119,7 @@
 
         /* Descrição 
         ===================*/
-        #desc{background-color: var(--cor1);height: 1000px;padding: 40px 0 0 0;}
+        #desc{background-color: var(--cor1);height: 1150px;padding: 40px 0 0 0;}
 
         #desc h1{color: var(--cor2);font-size: 36px;}
 
@@ -129,6 +133,37 @@
         #desc li{color: rgb(64, 63, 63); padding: 0 0 0 0; margin-bottom: 10px; font-size: 18px;}
 
         #desc ul{margin-left: 55px;}
+
+        /* Modelos 
+        ===================*/
+        #modelos{ background: #d8d4d4; padding-top: 50px; height: 950px;}
+
+        #modelos h1, #modelos h2{text-align: center;}
+
+        #modelos h2{font-size: 24px;}
+
+        #modelos button:focus {outline: none;}
+
+        #modelos button:hover {cursor: pointer; color: white;}
+
+        #modelos .item2 {width: 450px; height: 550px; background-color: white; filter: saturate(0); margin-left: -50px; padding: 20px 0; border-radius: 25px; opacity: 0.5;}
+
+        #container, #container2 { position: relative; margin: 0 auto;}
+
+        #modelos-desc {
+            height: 770px;
+            padding: 0 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        #modelos .bloco{width: 450px;}
+
+        #modelos ul{list-style-type: '- '}
+
+        #modelos li{padding: 5px 0;}
 
         /*Rodape 
         ==================*/
@@ -178,7 +213,8 @@
 
         #rodape a:nth-child(2):hover{color: white;}
 
-        /* Outros Dispositivos */
+        /* Outros Dispositivos 
+        ===============================*/
 
         @media (max-width: 518.98px) {
 
@@ -214,6 +250,26 @@
             #desc h1{font-size: 26px; padding: 0 40px;}
 
             #desc h2{font-size: 22px; padding: 25px 38px 0 38px;}
+
+            /*Modelos
+            ==================*/
+            #modelos {height: 675px; padding-top: 40px;}
+            
+            #modelos h1 {font-size: 25px;}
+
+            #modelos h2 {font-size: 12.75px;}
+
+            #modelos li{font-size: 8.75px;}
+
+            #modelos .item2{width: 200px; height: 340px; margin: 0 100px;}
+
+            #modelos .bloco {width: 200px;}
+
+            #modelos .ult{font-size: 7px;}
+
+            #modelos .seta-direita2, #modelos .seta-esquerda2{z-index: 10;}
+
+            #modelos-desc{padding: 0; height:490px ;} 
                 
             /*Rodape
             ==================*/
@@ -277,6 +333,16 @@
 
             #desc p, #desc li{font-size: 16px;}
 
+            /*Modelos
+            ==================*/
+            #modelos h2 {font-size: 18px;}
+
+            #modelos li{font-size: 12px;}
+
+            #modelos .item2{margin-left: -175px;}
+
+            #modelos .bloco {width: 330px;}
+
             /*Rodape
             ==================*/
             #rodape {height: 280px;}
@@ -298,6 +364,16 @@
             /*Descrição
             ==================*/
             #desc p {font-size: 18px;}
+
+            /*Modelos
+            ==================*/
+            #modelos h2 {font-size: 20px;}
+
+            #modelos li{font-size: 14px;}
+
+            #modelos .item2{margin-left: -100px;}
+
+            #modelos .bloco {width: 380px;}
 
             /*Rodape
             ==================*/
@@ -386,6 +462,110 @@
         </div>
     </section>
 
+    <section id="modelos">
+        <div id="container2" class="container">
+
+            <h1>Modelos disponíveis abaixo:</h1>
+
+            <button class="seta-direita2 controles2"><i class="fa-solid fa-chevron-right"></i></button>
+            <button class="seta-esquerda2 controles2"><i class="fa-solid fa-chevron-left"></i></button>
+
+            <div id="modelos-desc">
+                <div class="item2 item-foco2">
+                    <div class="bloco d-flex flex-column align-items-center">
+                        <h2>Scooter Elétrica AG 03 - 1000W</h2> 
+                        <ul class="d-flex flex-column align-items-center">
+                            <li>Motor 1000W</li>
+                            <li>Autonomia 25 km </li>
+                            <li>Velocidade máxima de 32 km/h</li>
+                            <li>Capacidade máxima de 160kg</li>
+                            <li>Bateria de lítio removível 60V 15Ah</li>
+                            <li>Bluetooth</li>
+                            <li>Tecnologia NFC</li>
+                            <li>Freio a disco</li>
+                        </ul>  
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="bloco d-flex flex-column align-items-center">
+                        <h2>Scooter Elétrica X9 - 1500W</h2>
+                        <ul class="d-flex flex-column align-items-center">
+                            <li>Motor 1500W</li> 
+                            <li>Bateria de lítio</li>
+                            <li>Autonomia 25 a 35 km</li>
+                            <li>Capacidade máxima de até 200kg</li>
+                            <li>Bluetooth</li>
+                            <li>Velocidade máxima de 40 a 50 km/h</li>
+                            <li>Tecnologia NFC</li>
+                            <li>Alarme</li>
+                            <li>Rodas de 8"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="bloco d-flex flex-column align-items-center">
+                        <h2>Scooter Elétrica X11 - 1000W</h2>   
+                        <ul class="d-flex flex-column align-items-center">
+                            <li>Motor 1000W</li>
+                            <li>Autonomia de até 40 km</li>
+                            <li>Velocidade máxima de até 32 km/h</li>
+                            <li>Bateria de lítio 60V 20Ah</li>
+                            <li>Carregador bivolt</li>
+                            <li>Painel 100% digital com NFC</li>
+                            <li>Alarme com bloqueio e trava</li>
+                            <li>Pedaleira de click</li>
+                            <li>Capacidade máxima de até 200kg</li>
+                            <li>Farol estilo Europeu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="bloco d-flex flex-column align-items-center">
+                        <h2>Scooter Elétrica X12 - 1000W</h2>
+                        <ul class="d-flex flex-column align-items-center">
+                            <li>Motor 1000W</li>
+                            <li>Autonomia de até 50 km</li>
+                            <li>Velocidade máxima de 32 km/h até 60 km/h</li>
+                            <li>Bateria de lítio 60V 24Ah Antichamas</li>
+                            <li>Carregador bivolt</li>
+                            <li>Alarme com bloqueio e trava</li>
+                            <li>Pedaleira de click</li>
+                            <li>Capacidade máxima de até 200kg</li>
+                            <li>Farol estilo Europeu</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="bloco d-flex flex-column align-items-center">
+                        <h2>Scooter Elétrica X14 - 1000W </h2>  
+                        <ul class="d-flex flex-column align-items-center">
+                            <li class="ult">Motor 1000W (pico de até 2000W)</li>
+                            <li class="ult">Velocidade máxima de 32 km/h a 60 km/h</li>
+                            <li class="ult">Autonomia de 40 a 60 km por carga</li>
+                            <li class="ult">Bateria de lítio 51V 20Ah (removível)</li>
+                            <li class="ult">Tempo de recarga de 4 a 6 horas</li>
+                            <li class="ult">Carregador bivolt</li>
+                            <li class="ult">Capacidade máxima de até 200 kg</li>
+                            <li class="ult">Painel digital com ignição NFC e chave tradicional</li>
+                            <li class="ult">Alarme com trava antifurto</li>
+                            <li class="ult">Freios a disco hidráulicos</li>
+                            <li class="ult">Suspensão dupla dianteira e traseira</li>
+                            <li class="ult">Banco confortável para condutor e passageiro</li>
+                            <li class="ult">Compartimento frontal para pertences</li>
+                            <li class="ult">Marcha à ré em alguns modelos</li>
+                        </ul> 
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </section>
+
 
     <footer id="rodape" class="d-flex flex-column align-items-center">
         <a style="animation: whatsapp 2.5s infinite ease-in-out;" target="_blank" href="https://api.whatsapp.com/send/?phone=5521968193720"><img class="img-fluid" width="160" src="imgs/Whats.png" alt="icone do whatsapp"></a>
@@ -400,7 +580,12 @@
         const itens = document.querySelectorAll('.item') 
         const maxItens = itens.length
 
+        const controles2 = document.querySelectorAll('.controles2') 
+        const itens2 = document.querySelectorAll('.item2') 
+        const maxItens2 = itens2.length
+
         let itemFoco = 0
+        let itemFoco2 = 0
 
         controles.forEach(controle => {
             controle.addEventListener('click', () => {
@@ -428,6 +613,46 @@
                 })
 
                 itens[itemFoco].classList.add('item-foco')
+            })
+        })
+
+        controles2.forEach(controle => {
+            controle.addEventListener('click', () => {
+                const esquerda = controle.classList.contains('seta-esquerda2')
+
+                if (esquerda) {
+                    itemFoco2 -= 1
+                } else {
+                    itemFoco2 += 1
+                }
+
+                if (itemFoco2 >= maxItens2) {
+                    itemFoco2 = 0
+                }
+
+                if (itemFoco2 < 0) {
+                    itemFoco2 = maxItens2 - 1
+                }
+
+                itens2.forEach(item => item.classList.remove('item-foco2'))
+                itens2.forEach(item => item.classList.remove('item-quase-foco'))
+
+                itens2[itemFoco2].scrollIntoView({
+                    block: "center",
+                    inline: "center"
+                })
+
+                itens2[itemFoco2].classList.add('item-foco2')
+
+                if(itemFoco2 < maxItens2){
+                    itens2[itemFoco2 + 1].classList.add('item-quase-foco')
+                }
+
+                if(itemFoco2 > 0){
+                    itens2[itemFoco2 - 1].classList.add('item-quase-foco')
+                }
+                
+                
             })
         })
     </script>

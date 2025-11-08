@@ -46,7 +46,14 @@
 
         body {background-color: black;}
 
-        #home img{width: 250px;}
+        #home img{
+            margin-top: 30px;
+            margin-left: 20px;
+            width: 175px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: -4px 4px 4px rgb(0, 0, 0, 0.75);
+        }
 
         section {height: 800px;}
 
@@ -56,6 +63,8 @@
 
         /* Classes 
         ==================*/
+        .rodas{height: 50px; background-image: url('imgs/rodas.png');}
+
         .container {padding: 0;}
 
         .row {height: 0px;}
@@ -94,6 +103,95 @@
             font-size: 30px;
             color: var(--cor2);
             z-index: 1;
+        }
+
+        /* Descrição Topo 
+        ===================*/
+        #descri{
+            height:750px;
+
+            background-image: url('imgs/home.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            padding: 0 0 0 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #descri h1{
+            width: 500px;
+            color: white;
+            -webkit-text-stroke: 2px white;
+            font-size: 40px;
+            margin: 13px 8px 19px 0px;
+            line-height: 44px;
+            text-shadow: -4px 3px 2px rgba(0, 0, 0, 0.912);
+        }
+
+        #descri a{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            position: relative;
+            z-index: 1;
+            color: white;
+            -webkit-text-stroke: 1px white;
+            letter-spacing: 2px;
+            border-radius: 0px;
+            border: 2.5px solid white;
+            width: 430px;
+            padding: 10px 25px;
+            background-color: transparent;
+            text-decoration: none;
+            text-align: center;
+            font-size: 18px;
+            box-shadow: 0px 0px 15px rgb(0, 0, 0);
+            text-shadow: -3px 3px 3px rgba(0, 0, 0, 0.49);
+        }
+
+        #descri a::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 0;
+            height: 100%;
+
+            background-color: #2ABF34;
+            transition: width 0.4s ease-in-out;
+        }
+
+        #descri a:hover::before{width: 100%;}
+        #descri a:hover{color: white; border-color: white;}
+
+        #descri img{animation:  whatsapp 2.5s infinite ease-in-out;}
+
+        #descri-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            height: 200px;
+        }
+
+        #descri-2 h1{
+            color: red;
+            font-size: 42px;
+            text-transform: uppercase;
+            -webkit-text-stroke: 2px red;
+        }
+
+        #descri-2 h2{
+            color: white;
+            text-transform: capitalize;
         }
 
         /* Motos 
@@ -220,7 +318,7 @@
 
         @media (max-width: 518.98px) {
 
-            #home img{width: 200px; margin-left: 40px;}
+            #home img{width: 125px; margin-left: 20px;}
 
             section {overflow: hidden;}
                 
@@ -231,6 +329,42 @@
             .col-10 {padding-right: 0px;padding-left: 0px;}
 
             .item-foco {opacity: 1; transform: scale(1.45); filter: saturate(1);}
+
+            /*Descrição Home
+            ==================*/
+
+            #descri{
+                height: 700px;
+                background-position: top center;
+            }
+
+            #descri h1{
+                width: auto;
+                font-size: 32px;
+                -webkit-text-stroke: 3px white;
+                line-height: 32px;
+                letter-spacing: 1.5px;
+                margin: 13px 8px 65px 0px;
+            }
+
+            #descri a{
+                width: 87.5%;
+            }
+
+            #descri-2 h1{
+                font-size: 32px;
+            }
+
+            #descri-2 h2 {
+                font-size: 26px;
+            }
+
+            #descri-2{
+                height: 300px;
+            }
+
+            /*Motos
+            ==================*/
                 
             #fotos {height: 535px;padding: 0;}
                 
@@ -388,7 +522,7 @@
         @keyframes whatsapp {
             from{transform: scale(1);}
 
-            50%{transform: scale(1.1);}
+            50%{transform: scale(1.2);}
 
             to{transform: scale(1);}
         }
@@ -401,13 +535,32 @@
         <div class="container">
             <div class="row align-items-center justify-content-center justify-content-md-start">
 
-                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-3 d-flex flex-column align-items-center align-items-sm-start">
+                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-3 d-flex flex-column align-items-start">
                     <img class="img-fluid navbar-sm-brand" src="imgs/logo.png" alt="logo">
                 </div>
 
             </div>
         </div>
     </header>
+
+    <section id="descri">
+        <div class="container d-flex flex-column">
+
+            <h1>COMPRE SUA SCOOTER ELETRICA COM A Nº 01 DO RIO DE JANEIRO</h1>
+            <a href="#" target="_blank" rel="external" style="text-transform: uppercase; font-weight: bold;"><img src="imgs/Whats.png" width="50" alt="">Fale com um especialista</a>
+
+        </div>
+    </section>
+
+    <section class="rodas"></section>
+
+    <section id="descri-2">
+        <h1>CONHEÇA NOSSOS MODELOS</h1>
+        <h2>Não encontrou o modelo desejado? </h2>
+        <h2>A gente busca pra você!</h2>
+    </section>
+
+    <section class="rodas"></section>
 
     <section id="motos">
         <div id="container" class="container">
@@ -423,6 +576,8 @@
 
         </div>
     </section>
+
+    <section class="rodas"></section>
 
     <section id="modelos">
         <div id="container2" class="container">
@@ -567,6 +722,8 @@
 
         </div>
     </section>
+
+    <section class="rodas"></section>
 
     <footer id="rodape" class="d-flex flex-column align-items-center">
         <a style="animation: whatsapp 2.5s infinite ease-in-out;" target="_blank" href="https://api.whatsapp.com/send/?phone=5521968193720"><img class="img-fluid" width="160" src="imgs/Whats.png" alt="icone do whatsapp"></a>

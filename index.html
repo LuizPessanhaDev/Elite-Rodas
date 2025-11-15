@@ -55,6 +55,8 @@
             box-shadow: -4px 4px 4px rgb(0, 0, 0, 0.75);
         }
 
+        #home .row {height: 0px;}
+
         section {height: 800px;}
 
         p {font-size: 18px; color: white; padding: 40px 0 10px 0;}
@@ -66,8 +68,6 @@
         .rodas{height: 50px; background-image: url('imgs/rodas.png');}
 
         .container {padding: 0;}
-
-        .row {height: 0px;}
 
         .item{filter: saturate(0);}
 
@@ -213,7 +213,7 @@
         #container, #container2 { position: relative; margin: 0 auto;}
 
         #fotos {
-            height: 1040px;
+            height: 800px;
             padding: 0 400px;
             display: flex;
             flex-wrap: nowrap;
@@ -223,7 +223,7 @@
 
         /* Descrição 
         ===================*/
-        #desc{background-color: white;height: 1150px;padding: 40px 0 0 0;}
+        #desc{background-color: white;height: 1150px;padding: 80px 0 0 0;}
 
         #desc h1{color: var(--cor2);font-size: 36px;}
 
@@ -240,36 +240,38 @@
 
         /* Modelos 
         ===================*/
-        #modelos{ background: #e8dfdf; padding-top: 50px; height: 950px;}
+        #modelos{ background: white; padding-top: 50px; height: 700px;}
 
-        #modelos h1{color: black; font-weight: bold;}
+        #modelos h1{color: red; font-weight: bolder; text-transform: uppercase; letter-spacing: -4px;}
 
-        #modelos h1, #modelos h2{text-align: center;}
+        #modelos h1{text-align: start; font-size: 58px;}
 
-        #modelos h2{font-size: 24px;}
+        #modelos h2{font-size: 24px; text-align: center;}
         
         #modelos button:focus {outline: none;}
 
         #modelos button:hover {cursor: pointer; color: white;}
 
-        #modelos .item2 {width: 450px; height: 550px; background-color: white; filter: saturate(0); margin-left: -50px; padding: 20px 0; border-radius: 25px; opacity: 0.5;}
+        #modelos .item2 {width: 750px; height: 550px; background-color: white; filter: saturate(0); margin-left: -50px; padding: 20px 0; border-radius: 25px; opacity: 0.5;}
 
         #container, #container2 { position: relative; margin: 0 auto;}
 
         #modelos-desc {
             height: 770px;
-            padding: 0 400px;
+            padding: 0 250px;
             display: flex;
             flex-wrap: nowrap;
             overflow: hidden;
             align-items: center;
         }
 
-        #modelos .bloco{width: 450px;}
+        #modelos .bloco{width: 750px;}
 
-        #modelos ul{list-style-type: '- '}
+        #modelos ul{margin-left: 30px;}
 
-        #modelos li{padding: 5px 0;}
+        #modelos li{font-size: 19px; text-transform: uppercase; color: gray; letter-spacing: -1px; font-weight: bolder;}
+
+        #modelos li::marker{color: red; font-size: 30px;}
 
         /*Rodape 
         ==================*/
@@ -316,6 +318,52 @@
         #rodape a:nth-child(2):hover::before{width: 100%;}
 
         #rodape a:nth-child(2):hover{color: white;}
+        
+        /* Carousel
+        ===============================*/
+
+        .carousel-item{
+            padding-top: 80px;
+        }
+
+        .carousel-indicators .active{
+            background-color: red;
+        }
+
+        .carousel-indicators li{
+            background-color: black;
+        }
+
+        .carousel-control-next-icon, .carousel-control-prev-icon{
+            background-image: url('');
+            width: 40px; height: 40px;
+        }
+
+        .img-carousel-div{
+            position: relative;
+
+            border-radius: 15px;
+            border: 1.5px solid black;
+            box-shadow: -8px 8px 0 black;
+            overflow: hidden;
+        }
+
+        .img-carousel{width: 425px; height: 425px;}
+
+        .valor-img-carousel{
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 60%;
+            height: 75px;
+            background-color: red;
+            z-index: 1;
+
+            border-radius: 10px;
+            border: 1.5px solid black;
+            box-shadow: -6px 6px 0 black;
+        }
 
         /* Outros Dispositivos 
         ===============================*/
@@ -573,107 +621,149 @@
     <section class="rodas"></section>
 
     <section id="modelos">
-        <div id="container2" class="container">
 
-            <h1>Modelos disponíveis abaixo:</h1>
+        <h1 style="text-align: center; color: gray;">MODELOS DISPONÍVEIS</h1>
 
-            <button class="seta-direita2 controles2"><i class="fa-solid fa-chevron-right"></i></button>
-            <button class="seta-esquerda2 controles2"><i class="fa-solid fa-chevron-left"></i></button>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 100%;">
 
-            <div id="modelos-desc">
-                <div class="item2 item-foco2">
-                    <div class="bloco d-flex flex-column align-items-center">
-                        <h2>Scooter Elétrica AG 03 - 1000W</h2> 
-                        <ul class="d-flex flex-column align-items-center">
-                            <li>Motor 1000W</li>
-                            <li>Autonomia 25 km </li>
-                            <li>Velocidade máxima de 32 km/h</li>
-                            <li>Capacidade máxima de 160kg</li>
-                            <li>Bateria de lítio removível 60V 15Ah</li>
-                            <li>Bluetooth</li>
-                            <li>Tecnologia NFC</li>
-                            <li>Freio a disco</li>
-                        </ul>  
+            <div class="carousel-inner" style="height: 100%;">
+
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row align-content-center">
+                            <div class="col-5 ml-auto mr-2 d-flex justify-content-center">
+                                <div class="img-carousel-div">
+                                    <img class="img-fluid img-carousel" src="imgs/AG03.png" alt="">
+                                </div>
+                                <div class="valor-img-carousel"></div>
+                            </div>
+                            <div class="col-4 mr-auto">
+                                <h1>AG 03</h1>
+                                <ul class="ul-carousel-items">
+                                    <li>Motor: 1000W</li>
+                                    <li>Autonomia: Até 25km</li>
+                                    <li>Velocidade Máxima: 32km/h</li>
+                                    <li>Bateria: 60v 15ah removível</li>
+                                    <li>Bluetooth e nfc</li>
+                                    <li>freio a disco</li>                                    
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item2">
-                    <div class="bloco d-flex flex-column align-items-center">
-                        <h2>Scooter Elétrica X9 - 1500W</h2>
-                        <ul class="d-flex flex-column align-items-center">
-                            <li>Motor 1500W</li> 
-                            <li>Bateria de lítio</li>
-                            <li>Autonomia 25 a 35 km</li>
-                            <li>Capacidade máxima de até 200kg</li>
-                            <li>Bluetooth</li>
-                            <li>Velocidade máxima de 40 a 50 km/h</li>
-                            <li>Tecnologia NFC</li>
-                            <li>Alarme</li>
-                            <li>Rodas de 8"</li>
-                        </ul>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-content-center">
+                            <div class="col-5 ml-auto mr-2 d-flex justify-content-center">
+                                <div class="img-carousel-div">
+                                    <img class="img-fluid img-carousel" src="imgs/X9.png" alt="">
+                                </div>
+                                <div class="valor-img-carousel"></div>
+                            </div>
+                            <div class="col-4 mr-auto">
+                                <h1>X9</h1>
+                                <ul class="ul-carousel-items">
+                                    <li>Motor: 1500W</li>
+                                    <li>Autonomia: 25 a 35km </li>
+                                    <li>Velocidade Máxima: 40-50km/h</li>
+                                    <li>Bateria a lítio</li>
+                                    <li>Bluetooth e nfc</li>
+                                    <li>freio a disco</li>                                    
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item2">
-                    <div class="bloco d-flex flex-column align-items-center">
-                        <h2>Scooter Elétrica X11 - 1000W</h2>   
-                        <ul class="d-flex flex-column align-items-center">
-                            <li>Motor 1000W</li>
-                            <li>Autonomia de até 40 km</li>
-                            <li>Velocidade máxima de até 32 km/h</li>
-                            <li>Bateria de lítio 60V 20Ah</li>
-                            <li>Carregador bivolt</li>
-                            <li>Painel 100% digital com NFC</li>
-                            <li>Alarme com bloqueio e trava</li>
-                            <li>Pedaleira de click</li>
-                            <li>Capacidade máxima de até 200kg</li>
-                            <li>Farol estilo Europeu</li>
-                        </ul>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-content-center">
+                            <div class="col-5 ml-auto mr-2 d-flex justify-content-center">
+                                <div class="img-carousel-div">
+                                    <img class="img-fluid img-carousel" src="imgs/X11.png" alt="">
+                                </div>
+                                <div class="valor-img-carousel"></div>
+                            </div>
+                            <div class="col-4 mr-auto">
+                                <h1>X11</h1>
+                                <ul class="ul-carousel-items">
+                                    <li>Motor: 1000w</li>
+                                    <li>Autonomia: até 40km</li>
+                                    <li>velocidade máxima: 32km/h</li>
+                                    <li>bateria: 60v 20ah</li>
+                                    <li>Painel digital nfc</li>
+                                    <li>capacidade: 200kg</li>                                    
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item2">
-                    <div class="bloco d-flex flex-column align-items-center">
-                        <h2>Scooter Elétrica X12 - 1000W</h2>
-                        <ul class="d-flex flex-column align-items-center">
-                            <li>Motor 1000W</li>
-                            <li>Autonomia de até 50 km</li>
-                            <li>Velocidade máxima de 32 km/h até 60 km/h</li>
-                            <li>Bateria de lítio 60V 24Ah Antichamas</li>
-                            <li>Carregador bivolt</li>
-                            <li>Alarme com bloqueio e trava</li>
-                            <li>Pedaleira de click</li>
-                            <li>Capacidade máxima de até 200kg</li>
-                            <li>Farol estilo Europeu</li>
-                        </ul>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-content-center">
+                            <div class="col-5 ml-auto mr-2 d-flex justify-content-center">
+                                <div class="img-carousel-div">
+                                    <img class="img-fluid img-carousel" src="imgs/X12.png" alt="">
+                                </div>
+                                <div class="valor-img-carousel"></div>
+                            </div>
+                            <div class="col-4 mr-auto">
+                                <h1>X12</h1>
+                                <ul class="ul-carousel-items">
+                                    <li>Motor: 1000w</li>
+                                    <li>Autonomia: até 50km</li>
+                                    <li>Velocidade Máxima: 32-60km/h</li>
+                                    <li>Bateria: 60V 24ah anti-chamas</li>
+                                    <li>Capacidade: 200kg</li>                                   
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item2">
-                    <div class="bloco d-flex flex-column align-items-center">
-                        <h2>Scooter Elétrica X14 - 1000W </h2>  
-                        <ul class="d-flex flex-column align-items-center">
-                            <li class="ult">Motor 1000W (pico de até 2000W)</li>
-                            <li class="ult">Velocidade máxima de 32 km/h a 60 km/h</li>
-                            <li class="ult">Autonomia de 40 a 60 km por carga</li>
-                            <li class="ult">Bateria de lítio 51V 20Ah (removível)</li>
-                            <li class="ult">Tempo de recarga de 4 a 6 horas</li>
-                            <li class="ult">Carregador bivolt</li>
-                            <li class="ult">Capacidade máxima de até 200 kg</li>
-                            <li class="ult">Painel digital com ignição NFC e chave tradicional</li>
-                            <li class="ult">Alarme com trava antifurto</li>
-                            <li class="ult">Freios a disco hidráulicos</li>
-                            <li class="ult">Suspensão dupla dianteira e traseira</li>
-                            <li class="ult">Banco confortável para condutor e passageiro</li>
-                            <li class="ult">Compartimento frontal para pertences</li>
-                            <li class="ult">Marcha à ré em alguns modelos</li>
-                        </ul> 
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-content-center">
+                            <div class="col-5 ml-auto mr-2 d-flex justify-content-center">
+                                <div class="img-carousel-div">
+                                    <img class="img-fluid img-carousel" src="imgs/X14.png" alt="">
+                                </div>
+                                <div class="valor-img-carousel"></div>
+                            </div>
+                            <div class="col-4 mr-auto">
+                                <h1>X14</h1>
+                                <ul class="ul-carousel-items">
+                                    <li>motor: 1000w</li>
+                                    <li>autonomia: 40 a 40 km</li>          
+                                    <li>velocidade maxima: 32-60km/h</li>
+                                    <li>Bateria: 51v 20ah removível</li>
+                                    <li>Painel digital nfc</li>
+                                    <li>capacidade: 200kg</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
             </div>
 
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-left fa-2xl" style="color: red;"></i>
+                </span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-right fa-2xl" style="color: red;"></i>
+                </span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
+
     </section>
 
     <section id="desc">

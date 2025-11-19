@@ -200,27 +200,6 @@
             color: black;
         }
 
-        /* Motos 
-        ===================*/
-        #motos{ background: url('imgs/bg.jpg') center no-repeat; background-size: cover;}
-
-        #motos button:focus {outline: none;}
-
-        #motos button:hover {cursor: pointer; color: white;}
-
-        #motos img {width: 300px; height: 300px; margin: 0 75px;}
-
-        #container, #container2 { position: relative; margin: 0 auto;}
-
-        #fotos {
-            height: 800px;
-            padding: 0 400px;
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: hidden;
-            align-items: center;
-        }
-
         /* Descrição 
         ===================*/
         #desc{background-color: white;height: 1150px;padding: 80px 0 0 0;}
@@ -351,6 +330,12 @@
         .img-carousel{width: 425px; height: 425px;}
 
         .valor-img-carousel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 32px;
+
             position: absolute;
             bottom: -40px;
             left: 50%;
@@ -363,6 +348,15 @@
             border-radius: 10px;
             border: 1.5px solid black;
             box-shadow: -6px 6px 0 black;
+        }
+
+        .valor-img-carousel a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .valor-img-carousel a:hover{
+            transform: scale(1.1);
         }
 
         /* Outros Dispositivos 
@@ -420,15 +414,6 @@
             #descri-2{
                 height: 250px;
             }
-
-            /*Motos
-            ==================*/
-                
-            #fotos {height: 535px;padding: 0;}
-                
-            #motos {height: 535px;}
-                
-            #motos img {width: 165px;height: 165px;margin: 0 145px;}
 
             /*Descrição
             ==================*/
@@ -490,6 +475,10 @@
             /* Carousel
         ===============================*/
 
+            .valor-img-carousel{
+                font-size: 22px;
+            }
+
             .carousel-item{
                 padding-top: 350px;
 
@@ -503,14 +492,6 @@
             section {overflow: hidden;}
 
             #fotos {height: 700px;padding-left: 200px;}
-
-            #motos {height: 700px;}
-
-            #motos img {width: 200px;height: 200px;margin: 0 55px;}
-
-            .seta-esquerda {left: -35px;}
-
-            .seta-direita {right: -35px;}
 
             /*Descrição
             ==================*/
@@ -529,6 +510,10 @@
 
             #modelos .bloco {width: 330px;}
 
+            .valor-img-carousel{
+                font-size: 24px;
+            }
+
             /*Rodape
             ==================*/
             #rodape {height: 280px;}
@@ -540,12 +525,6 @@
             body {overflow-x: hidden;}
 
             section {overflow: hidden;}
-
-            #motos {height: 700px;}
-
-            #motos img {width: 250px; height: 250px; margin: 0 75px;}
-
-            #fotos {height: 700px; padding: 0px 315px;}
 
             /*Descrição
             ==================*/
@@ -566,7 +545,6 @@
             #rodape {height: 275px;}
 
             #rodape p {font-size: 18px;}
-
         }
 
         @keyframes whatsapp {
@@ -612,23 +590,6 @@
 
     <section class="rodas"></section>
 
-    <section id="motos">
-        <div id="container" class="container">
-
-            <button class="seta-direita controles"><i class="fa-solid fa-chevron-right"></i></button>
-            <button class="seta-esquerda controles"><i class="fa-solid fa-chevron-left"></i></button>
-
-            <div id="fotos">
-                <img class="item item-foco" src="imgs/moto-1.png" alt="primeira moto eletrica">
-                <img class="item" src="imgs/moto-2.png" alt="segunda moto eletrica">
-                <img class="item" src="imgs/moto-3.png" alt="terceira moto eletrica">
-            </div>
-
-        </div>
-    </section>
-
-    <section class="rodas"></section>
-
     <section id="modelos">
 
         <h1 style="text-align: center; color: gray;">MODELOS DISPONÍVEIS</h1>
@@ -644,7 +605,7 @@
                                 <div class="img-carousel-div">
                                     <img class="img-fluid img-carousel" src="imgs/AG03.png" alt="">
                                 </div>
-                                <div class="valor-img-carousel"></div>
+                                <div class="valor-img-carousel"><a href="https://api.whatsapp.com/send/?phone=5521968193720" target="_blank" rel="external" >SAIBA MAIS!!</a></div>
                             </div>
                             <div class="col-9 col-md-4 m-auto mr-md-auto ml-md-0 mt-md-0 pt-5 pt-md-0">
                                 <h1>AG 03</h1>
@@ -668,7 +629,7 @@
                                 <div class="img-carousel-div">
                                     <img class="img-fluid img-carousel" src="imgs/X9.png" alt="">
                                 </div>
-                                <div class="valor-img-carousel"></div>
+                                <div class="valor-img-carousel"><a href="https://api.whatsapp.com/send/?phone=5521968193720" target="_blank" rel="external" >SAIBA MAIS!!</a></div>
                             </div>
                             <div class="col-9 col-md-4 m-auto mr-md-auto ml-md-0 mt-md-0 pt-5 pt-md-0">
                                 <h1>X9</h1>
@@ -692,7 +653,7 @@
                                 <div class="img-carousel-div">
                                     <img class="img-fluid img-carousel" src="imgs/X11.png" alt="">
                                 </div>
-                                <div class="valor-img-carousel"></div>
+                                <div class="valor-img-carousel"><a href="https://api.whatsapp.com/send/?phone=5521968193720" target="_blank" rel="external" >SAIBA MAIS!!</a></div>
                             </div>
                             <div class="col-9 col-md-4 m-auto mr-md-auto ml-md-0 mt-md-0 pt-5 pt-md-0">
                                 <h1>X11</h1>
@@ -716,7 +677,7 @@
                                 <div class="img-carousel-div">
                                     <img class="img-fluid img-carousel" src="imgs/X12.png" alt="">
                                 </div>
-                                <div class="valor-img-carousel"></div>
+                                <div class="valor-img-carousel"><a href="https://api.whatsapp.com/send/?phone=5521968193720" target="_blank" rel="external" >SAIBA MAIS!!</a></div>
                             </div>
                             <div class="col-9 col-md-4 m-auto mr-md-auto ml-md-0 mt-md-0 pt-5 pt-md-0">
                                 <h1>X12</h1>
@@ -739,7 +700,7 @@
                                 <div class="img-carousel-div">
                                     <img class="img-fluid img-carousel" src="imgs/X14.png" alt="">
                                 </div>
-                                <div class="valor-img-carousel"></div>
+                                <div class="valor-img-carousel"><a href="https://api.whatsapp.com/send/?phone=5521968193720" target="_blank" rel="external" >SAIBA MAIS!!</a></div>
                             </div>
                             <div class="col-9 col-md-4 m-auto mr-md-auto ml-md-0 mt-md-0 pt-5 pt-md-0">
                                 <h1>X14</h1>
